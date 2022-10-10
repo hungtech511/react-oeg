@@ -1,0 +1,68 @@
+.sidebar{
+    width: calc(((100% - 442px) / 12) * 3 + 102px);
+    min-height: 100vh;
+    min-width: 360px;
+    background: #0a0e13;
+    border-right: 1px solid #252c32;
+}
+.sidebar-wrapper {
+    position: fixed;
+    height: calc(100vh - 80px);
+    width: calc(((100% - 442px) / 12) * 3 + 102px);
+}
+.sidebar h2{
+    font-size: 16px;
+    color: #F7C51E;
+    padding: 38px 0 18px 28px;
+    border-bottom: 1px solid #252c32;
+}
+.sidebar .sidebar-leagues{
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 80px;
+}
+.sidebar .sidebar-leagues .sidebar-league{
+    padding:12px 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    list-style: none;
+    border-bottom: 1px solid #252c32;
+    color: #8fa3b0;
+    transition: background .25s ease-out;
+}
+.sidebar .sidebar-leagues .sidebar-league .sidebar--league-wrapper{
+    opacity: 0.3;
+    transition: all .25s;
+}
+.sidebar .sidebar-leagues .sidebar-league:hover .sidebar--league-wrapper{
+    opacity: 1;
+}
+.sidebar .sidebar-leagues .sidebar-league::after{
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    content: '';
+    z-index: 100;
+    right: 0;
+    background: transparent;
+}
+.sidebar .sidebar-leagues .sidebar-league:hover::after{
+    background:#252c32;
+}
+.sidebar .sidebar-leagues .sidebar-league.selected .sidebar--league-wrapper{
+    opacity: 1;
+}
+.sidebar .sidebar-leagues .sidebar-league.selected::after{
+    background:#F7C51E;
+}
+.sidebar .sidebar-leagues .sidebar-league .league-image{
+    width: 60px;
+    height: 60px;
+    margin: 0 12px 0 24px;
+}
+

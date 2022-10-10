@@ -1,0 +1,15 @@
+@media screen and (max-width: 767px) {
+    .vods,
+    .sidebar .leauge-selector{
+        display: block;
+    }
+    .sidebar, .sidebar-wrapper{
+        width: 100% !important;
+    }
+    .sidebar-wrapper{
+        position: relative !important;
+    }
+    .sidebar-wrapper h2{
+        display: none;
+    }
+}
