@@ -90,3 +90,14 @@
 .list .game-selector .games .game:hover{
     color:#F7C51E;
 }
+.list .game-selector .games .game.active{
+    color:#F7C51E;
+}
+.list .video-wrapper{
+    margin:11px 34px 0;
+    width: 100%;
+}
+.list .video-wrapper iframe{
+    width:80%;
+    height:70vh;
+}

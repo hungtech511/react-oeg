@@ -1,4 +1,4 @@
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1300px) {
     .vods,
     .sidebar .leauge-selector{
         display: block;
@@ -8,8 +8,68 @@
     }
     .sidebar-wrapper{
         position: relative !important;
+        height:auto !important;
+        border-top:1px solid #252c32;
+        border-bottom:1px solid #252c32;
     }
     .sidebar-wrapper h2{
         display: none;
     }
+    .sidebar{
+        min-height: 0 !important;
+        border-right:0 !important;
+    }
+    .sidebar .sidebar-content{
+        display: none;
+    }
+    .selector{
+        width: calc(((100% - 442px) / 12) * 6 + 204px);
+        border-right: 1px solid #252c32;
+        display: flex;
+        align-items: center;
+        padding: 0 34px;
+    }
+    .vods.active .sidebar-content{
+        display: block;
+        width: calc(((100% - 442px) / 12) * 6 + 204px);
+        position: fixed;
+        background: #000;
+        z-index: 10;
+    }
+    .markdown{
+        color:#F7C51E;
+    }
+    .vods.active .markdown{
+        transform: rotate(180deg);
+    }
+    .vods.active .list::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        backdrop-filter: blur(4px);
+    }
+    .vods.active .list .list-match{
+        filter:blur(4px)
+    }
 }
+
+@media screen and (max-width: 791px) {
+    .selector{
+        width: 100%;
+        border-right: none;
+    }
+    .vods.active .sidebar-content{
+        width: 100%;
+    }
+    .list .list-match .match-wrapper{
+        display: block !important;
+    }
+    .list .game-selector{
+        justify-content: flex-start !important;
+        margin:0 auto !important;
+    }
+    .list .list-teams{
+        margin-bottom: 20px !important;
+    }
+  }
