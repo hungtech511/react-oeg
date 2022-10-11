@@ -28,6 +28,7 @@ img, a {
   animation: fadein .8s;
   overflow: hidden;
   min-height: 100vh;
+  background:#121212
 }
 
 .leauge-selector{

@@ -1,4 +1,5 @@
 @media screen and (max-width: 1300px) {
+
     .vods,
     .sidebar .leauge-selector{
         display: block;
@@ -39,6 +40,9 @@
     .markdown{
         color:#F7C51E;
     }
+    .vods.active  .sidebar{
+        position: fixed;
+        z-index: 22;}
     .vods.active .markdown{
         transform: rotate(180deg);
     }
@@ -71,5 +75,26 @@
     }
     .list .list-teams{
         margin-bottom: 20px !important;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .list .list-tab{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .list .list-teams .result{
+       margin:0 20px !important;
+    }
+    .list .list-teams .result .result-first-team {
+        margin-right: 0 !important;
+    }
+    .list .list-teams .result .result-second-team {
+        margin-left: 0 !important;
+    }
+    .list .game-selector {
+        justify-content:center !important
     }
   }

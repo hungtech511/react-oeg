@@ -105,6 +105,7 @@ const fakeTabs = [
 // State cho list round match
 const [getIndex,setGetIndex] = useState(0);
 const [renderVideo, setRenderVideo] = useState({})
+const [toggleVideo,setToggleVideo] = useState(false)
 const fakeVideo = [
   {
     id:1,
@@ -221,7 +222,8 @@ const fakeVideo = [
                     <a key={item.id} onClick={(e) =>{
                       e.preventDefault();
                       setGetIndex(item.id);
-                      setRenderVideo(item)}} className={getIndex === item.id ? "game active" : "game"} href="#">{item.id}</a>
+                      setRenderVideo(item);
+                    }} className={getIndex === item.id ? "game active" : "game"} href="#">{item.id}</a>
                   )
                 })
               }
